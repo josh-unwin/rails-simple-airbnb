@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row mx-3 justify-center">
+    <% @flats.each do |flat| %>
+      <div class="card m-2">
+        <img src="<%= flat.image_url %>" alt="">
+        <div class="card-info p-3">
+          <p><%= link_to flat.name, flat_path(flat) %></p>
+          <h5>£<%= flat.price_per_night %></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
